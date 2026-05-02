@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>🎬 Movie Ticket Booking System</h2>
+
+    <div class="nav-right">
+        <span>👤 {{ user }}</span>
+        <a href="/history">History</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+<div class="container">
+    
+<!-- CUSTOMER -->
+<input type="text" id="customer" placeholder="Enter Customer Name">
+    
+<h3>Select Seat</h3>
+<div class="seats" id="seats"></div>
+
+<!-- 🔥 MESSAGE -->
+{% if request.args.get('msg') == 'added' %}
+<p style="color:lightgreen; font-weight:bold;">✅ Movie added successfully</p>
+{% elif request.args.get('msg') == 'exists' %}
+<p style="color:red; font-weight:bold;">❌ Movie already exists</p>
+{% endif %}
+
+<!-- 🔥 ADD MOVIE (ADMIN ONLY) -->
+{% if user == "admin" %}
+<form action="/add_movie" method="POST">
+    <input name="name" placeholder="Add Movie">
+    <button>Add</button>
+</form>
+{% endif %}
+
+<!-- MOVIE SELECT -->
+<select id="movie">
+    {% for m in movies %}
+        <option>{{ m }}</option>
+    {% endfor %}
+</select>
+
+<!-- TIMING -->
+<select id="timing">
+    <option>10:00 AM</option>
+    <option>1:00 PM</option>
+    <option>4:00 PM</option>
+    <option>7:00 PM</option>
+</select>
+
+
+<!-- LEGEND -->
+<div class="legend">
+    <div><span class="box green"></span> Available</div>
+    <div><span class="box orange"></span> Selected</div>
+    <div><span class="box red"></span> Booked</div>
+</div>
+
+<!-- PAYMENT -->
+<div class="payment">
+    <h3>💳 Payment</h3>
+    <input placeholder="Card Number">
+    <input placeholder="CVV">
+</div>
+
+<button onclick="bookTicket()">Book Ticket</button>
+
+</div>
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

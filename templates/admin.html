@@ -1,0 +1,18 @@
+<h2>Admin Panel - All Bookings</h2>
+
+<table border="1">
+<tr>
+    <th>User</th>
+    <th>Movie</th>
+    <th>Seat</th>
+</tr>
+
+{% for b in bookings %}
+<tr>
+    <td>{{ b[1] }}</td>
+    <td>{{ b[2] }}</td>
+    <td>{{ b[3] }}</td>
+</tr>
+{% endfor %}
+
+</table>

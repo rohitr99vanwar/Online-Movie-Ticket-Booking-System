@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #1e1e2f, #111);
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 40px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.navbar a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar span {
+    margin-right: 20px;
+}
+
+/* CENTER */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+/* CARD */
+.container {
+    background: #222;
+    /* justify-content: center; */
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    /* height: 200px; */
+    width: 350px;
+    margin: auto;
+    /* box-shadow: 0 0 20px rgba(0,0,0,0.5); */
+    /* display: flex; */
+    /* align-items: center; */
+    /* height: 100vh; */
+}
+
+/* INPUT */
+select, input {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+}
+
+/* SEATS */
+.seats {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.seat {
+    background: green;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+/* HOVER EFFECT */
+.seat:hover {
+    transform: scale(1.1);
+}
+
+.seat.selected {
+    background: orange;
+    transform: scale(1.1);
+}
+
+.seat.booked {
+    background: red;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* BUTTON */
+button {
+    padding: 10px 20px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* PAYMENT */
+.payment {
+    background: #333;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+/* LOGIN CENTER */
+.auth-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-box {
+    background: #222;
+    padding: 40px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+/* FORM ALIGN */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BUTTON CENTER */
+.btn-center {
+    display: flex;
+    justify-content: center;
+    width: 200%;
+}
+/* BUTTON CENTER */
+.center-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 30px;
+    background: red;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* BUTTON FIX */
+.auth-form button {
+    margin-top: 15px;
+    width: 120px;
+}
+/* LEGEND */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.box {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+
+.green { background: green; }
+.orange { background: orange; }
+.red { background: red; }
+
+.message {
+    margin-bottom: 10px;
+    font-weight: bold;
+}

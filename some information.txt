@@ -1,0 +1,18 @@
+HOW YOUR FRIEND WILL RUN PROJECT
+
+
+🔥 Step 1: Open project folder
+    terminal madhe type:-
+            cd ticket_booking
+🔥 Step 2: Create virtual environment
+    terminal madhe type:-
+             python -m venv venv
+🔥 Step 3: Activate venv
+  Windows:
+         venv\Scripts\activate
+🔥 Step 4: Install dependencies
+    terminal madhe type:-
+           pip install -r requirements.txt
+🔥 Step 5: Run project
+terminal madhe type:-
+            python app.py
